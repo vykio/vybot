@@ -1,6 +1,7 @@
 import os
 import discord
 import re
+from keep_alive import keep_alive
 import asyncio
 import requests
 
@@ -56,4 +57,5 @@ async def on_message(message):
 
 bot_token = os.environ['bot_token']
 
+keep_alive()
 client.run(bot_token)
